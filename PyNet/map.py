@@ -18,7 +18,7 @@ room_floor0 = {
 The normal buzz of student life is nowhere to be seen. The elevator door appears to be out of whack. At least
 nobody is around to pass on their flu on your big day.""",
 
-    "exits": {"right": "Reception", "up": "Floor1"},
+    "exits": {"right": "Reception", "up": "Floor1", "test": "FinishHim"},
 
     "items": []
 }
@@ -160,8 +160,8 @@ was all caused by the machine??. Y tho?""",
     "items": [item_note]
 }
 
-threat_id = {
-    "name": "Print the threat id",
+room_threat_id = {
+    "name": "PrintThreat",
 
     "description":
     """You frantically input the command.. trying to find some reason behind the madness that has ensued...
@@ -176,13 +176,13 @@ such arbitrary details.""",
 
 # trying to link the player back to the note left by jing?
 
-    "exits": {"down": "Floor2", "input killcode":"Finish him"},
+    "exits": {"down": "Floor2", "input killcode": "Finish him"},
 
     "items": []
 }
 
-finish_him = {
-    "name": "input killcode",
+room_finish_him = {
+    "name": "FinishHim",
 
     "description":
         """ """,
@@ -202,9 +202,9 @@ rooms = {
     "Fight": room_fight,
     "Floor2": room_floor2,
     "Jing Wu": room_jing,
-    "pay respects": room_f,
+    "Pay Respects": room_f,
     "Floor3": room_floor3,
     "Lecture Hall": room_lecture,
-    "Print the threat id": threat_id,
-    "Finish him": finish_him,
+    "PrintThreat": room_threat_id,
+    "FinishHim": room_finish_him,
 }

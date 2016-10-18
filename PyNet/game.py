@@ -4,7 +4,7 @@ from map import rooms
 from kirill import *
 from items import *
 from gameparser import *
-from intro import *
+from extras import *
 
 
 def list_of_items(items):
@@ -150,12 +150,21 @@ def move(exits, direction):
 
 # This is the entry point of our program
 def main():
+    global current_room
     print(intro)
     input("Press Enter to Continue")
     # Main game loop
     while True:
         # Display game status (room description, inventory etc.)
         print_room(current_room)
+        if current_room == rooms["FinishHim"]:
+            complete = show_outro()
+            if complete:
+                break
+            else:
+                current_room = rooms["PrintThreat"]
+                continue
+
         print_inventory_items(inventory)
 
         # Show the menu with possible actions and ask the player
@@ -164,7 +173,16 @@ def main():
         # Execute the player's command
         execute_command(command)
 
+def show_outro():
+    print("C:\\users\Kirill\Protectotron> Hello Master. Have you got something to tell me?")
+    machine_input = input()
 
+    if machine_input == "mylittlepony99":
+        print(ending_win)
+        return True
+    else:
+        print("C:\\users\Kirill\Protectotron> That input is not recognised. Subject being ejected from area.")
+        return False
 
 # Are we being run as a script? If so, run main().
 # '__main__' is the name of the scope in which top-level code executes.
