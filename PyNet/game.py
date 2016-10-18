@@ -20,8 +20,9 @@ def print_room_items(room):
         print("")
 
 def print_inventory_items(items):
-    print("You have " + list_of_items(inventory) + ".")
-    print("")
+    if len(items) != 0:
+        print("You have " + list_of_items(inventory) + ".")
+        print("")
 
 def print_room(room):
     print()
