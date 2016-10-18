@@ -144,14 +144,49 @@ room_lecture = {
     "name": "Lecture Hall",
 
     "description":
-    """Oh dear. You recognise now that perhaps you might some involvement here. """,
+    """Oh dear. You recognise now that perhaps you might have some involvement here. "Welcome Kirill" an automated
+    voice spoke from the front of the lecture hall. "All threats within the vicinity
+    have successfully been incapacitated". No, it couldn't be.. your wonderful creation, your beautiful bae. This disaster
+    was all caused by the machine??. Y tho?""",
 
-    "exits": {"down": "Floor2", "left": "Lecture Hall"},
+    "exits": {"down": "Floor2", "left": "Lecture Hall", "input print threat_id": "Print the threat id"},
 
     "items": [item_note]
 }
 
+threat_id = {
+    "name": "Print the threat id",
 
+    "description":
+    """You frantically input the command.. trying to find some reason behind the madness that has ensued...
+    "Threat id - Possible freshers flu contamination" reads the machine. "Threat priority HIGH.
+    Moderate incapacitation executed". Although unethical you realise resistance to the incapacitation module has
+    been known to cause violent and unforgiving psychosis in some subjects. This mixed with your deep underlying fear
+    of contracting one of university's greatest perils "freshers flu" may have been somewhat misinterpreted
+    in the many thousands of lines of code that govern this great invention.
+
+    You must find a way to end this. The killcode of course!... wait what was it again? Urgh who has time to remember
+    such arbitrary details.""",
+
+# trying to link the player back to the note left by jing?
+
+    "exits": {"down": "Floor2", "input killcode":"Finish him"},
+
+    "items": []
+}
+
+finish_him = {
+    "name": "input killcode",
+
+    "description":
+        """ """,
+
+    # somehow create a win condition?
+
+    "exits": {" "},
+
+    "items": []
+}
 rooms = {
     "Floor0": room_floor0,
     "Reception": room_reception,
@@ -163,5 +198,7 @@ rooms = {
     "Jing Wu": room_jing,
     "pay respects": room_f,
     "Floor3": room_floor3,
-    "Lecture Hall": room_lecture
+    "Lecture Hall": room_lecture,
+    "Print the threat id": threat_id,
+    "Finish him": finish_him,
 }
