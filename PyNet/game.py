@@ -9,7 +9,7 @@ from gameparser import *
 def list_of_items(items):
     iteml = ""
     for item in items:
-        iteml = iteml + ", " + item["name"]
+        iteml = iteml + ", " + item["id"]
     iteml = iteml[2:]
     return iteml
 
@@ -41,22 +41,38 @@ def print_menu(exits, room_items, inv_items):
     print("You can:")
     for direction in exits:
         print_exit(direction, exit_leads_to(exits, direction))
-    for i in room_items:
-        print("TAKE " + i["id"].upper() + " to take " + i["name"] + ".")
-    for i in inv_items:
-        print("DROP " + i["id"].upper() + " to drop your " + i["name"] + ".")
+    if len(room_items) != 0:
+        print("TAKE " + list_of_items(room_items).upper() + " to take item(s).")
+    if len(inv_items) != 0:
+        print("DROP or EXAMINE your " + list_of_items(inv_items).upper() + " to drop/examine item(s).")
     print("What do you want to do?")
 
 def is_valid_exit(exits, chosen_exit):
     return chosen_exit in exits
 
+def try_enter_room(exits, direction):
+    global current_room
+    room = rooms[exits[direction]]
+    if "requirements" in room:
+        requirement = room["requirements"]
+        item = requirement["item"]
+        if item in inventory:
+            inventory.remove(item)
+            print(requirement["item_held"])
+            del room["requirements"]
+            current_room = move(exits, direction)
+        else:
+            print(requirement["item_missing"])
+    else:
+        current_room = move(exits, direction)
+
 def execute_go(direction):
     global current_room
     exits = current_room['exits']
     if is_valid_exit(exits, direction):
-        current_room = move(exits, direction)
+        try_enter_room(exits, direction)
     else:
-        print("You cannot go there.")
+        print("This isn't Elder Scrolls, move where we tell you to.")
 
 def execute_take(item_id):
     for item in current_room["items"]:
@@ -64,20 +80,23 @@ def execute_take(item_id):
             inventory.append(item)
             current_room["items"].remove(item)
             return
-    print("You cannot take that.")
-#
-#
-# IMPORTANT
-# Need to add a use command into here, possibly to replace drop. If you know how to do it just do it and tell us lol
-#
-#
+    print("You have not the power to take items from anywhere you want. Not quite, anyway.")
+
+def execute_examine(item_id):
+    for item in inventory:
+        if item_id == item["id"]:
+            print(str(item["name"]).upper() + ":")
+            print(item["description"])
+            return
+    print("You attempt to examine something you don't have, and you fail miserably.")
+
 def execute_drop(item_id):
     for item in inventory:
         if item_id == item["id"]:
             inventory.remove(item)
             current_room["items"].append(item)
             return
-    print("You cannot drop that.")
+    print("You didn't drop anything and you looked like a fool.")
 
 def execute_command(command):
     if 0 == len(command):
@@ -100,9 +119,13 @@ def execute_command(command):
             execute_drop(command[1])
         else:
             print("Drop what?")
-
+    elif command[0] == "examine":
+        if len(command) > 1:
+            execute_examine(command[1])
+        else:
+            print("Examine what?")
     else:
-        print("This makes no sense.")
+        print("Please English better, that made no sense.")
 
 
 def menu(exits, room_items, inv_items):
