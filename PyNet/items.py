@@ -8,9 +8,9 @@ item_phone = {
 }
 
 item_bodypillow = {
-    "id": "bodypillow",
+    "id": "pillow",
 
-    "name": "anime body pillow",
+    "name": "pillow",
 
     "description":
     "You have overcome a moral barrier to pick this up. It smells... strange."
@@ -41,10 +41,10 @@ item_note = {
     "description": "A crumpled note that reads: 'To Kill Type: mylittlepony99'"
 }
 
-item_handbook = {
-    "id": "handbook",
+item_coughsyrup = {
+    "id": "medicine",
     
-    "name": "a student handbook",
+    "name": "russian-grade cough syrup",
 
-    "description": "This student handbook explains everything. Seriously."
+    "description": "So strong it's illegal in almost every country. Can't go getting ill on your big day."
 }
