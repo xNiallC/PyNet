@@ -86,8 +86,8 @@ the chainsaw, but a real man goes in with his fists and his wit.""",
 
     "requirements": {
         "item": item_saw,
-        "item_held": "You succesfully unblocked door",
-        "item_missing": "It seems like your fists aren't strong enough",
+        "item_held": "You heroically tear apart the barricade with your chainsaw.",
+        "item_missing": "You headbutt the barrier in an attempt to break it, but it doesn't work. You need something else.",
     }
 }
 

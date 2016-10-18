@@ -4,6 +4,7 @@ from map import rooms
 from kirill import *
 from items import *
 from gameparser import *
+from intro import *
 
 
 def list_of_items(items):
@@ -149,7 +150,8 @@ def move(exits, direction):
 
 # This is the entry point of our program
 def main():
-
+    print(intro)
+    input("Press Enter to Continue")
     # Main game loop
     while True:
         # Display game status (room description, inventory etc.)
