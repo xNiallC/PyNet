@@ -15,8 +15,8 @@ room_floor0 = {
 
     "description":
     """The Central Building bottom floor is suspiciously quiet. There is no smell of breakfast from the cafeteria.
-    The normal buzz of student life is nowhere to be seen. The elevator door appears to be out of whack. At least
-    nobody is around to pass on their flu on your big day.""",
+The normal buzz of student life is nowhere to be seen. The elevator door appears to be out of whack. At least
+nobody is around to pass on their flu on your big day.""",
 
     "exits": {"right": "Reception", "up": "Floor1"},
 
@@ -76,13 +76,19 @@ room_f2o = {
     "name": "Second Floor",
 
     "description":
-    """After effortlessly clearing the barricade thanks to your mighty chainsaw, you climb the stairs to the second floor.
-    None of the lights are on, and in the near distance you notice a shadowy figure lumbering about. A wiseman would ready
-    the chainsaw, but a real man goes in with his fists and his wit.""",
+        """After effortlessly clearing the barricade thanks to your mighty chainsaw, you climb the stairs to the second floor.
+        None of the lights are on, and in the near distance you notice a shadowy figure lumbering about. A wiseman would ready
+        the chainsaw, but a real man goes in with his fists and his wit.""",
 
     "exits": {"forward": "Fight"},
 
-    "items": []
+    "items": [],
+
+    "requirements": {
+        "item": item_saw,
+        "item_held": "You succesfully unblocked door",
+        "item_missing": "It seems like your fists aren't strong enough",
+    }
 }
 
 room_fight = {
