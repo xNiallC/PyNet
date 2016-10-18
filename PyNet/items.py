@@ -38,7 +38,7 @@ item_note = {
     
     "name": "note",
 
-    "description": "A crumpled note that reads: 'To Kill Type: mylittlepony99'"
+    "description": "A crumpled note that reads: 'To Kill, Type: mylittlepony99'"
 }
 
 item_coughsyrup = {

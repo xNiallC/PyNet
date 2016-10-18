@@ -28,7 +28,7 @@ room_reception = {
 
     "description":
     """You walk over to the reception. There is nobody here, and there appears to be nobody around. Everything is left
-    on as if someone had to leave urgently. You notice a phone with a blinking notification indicator and a strange item.""",
+on as if someone had to leave urgently. You notice a phone with a blinking notification indicator and a strange item.""",
 
     "exits":  {"left": "Floor0", "up": "Floor1"},
 
@@ -40,8 +40,8 @@ room_floor1 = {
 
     "description":
     """The First Floor is as desolate as the ground floor. Some things appear to be damaged as if there has been some
-     kind of apocalypse but that would be ridiculous. There is a totally standard incapacitated body to the left, and
-     the stairs to the right have been barricaded(?). If only you hadn't left your toolkit at home.""",
+kind of apocalypse but that would be ridiculous. There is a totally standard incapacitated body to the left, and
+the stairs to the right have been barricaded(?). If only you hadn't left your toolkit at home.""",
 
     "exits": {"down": "Floor0", "left": "body", "up": "Floor2Opening"},
 
@@ -53,8 +53,8 @@ room_body = {
 
     "description":
     """You walk over to the lifeless body. You notice a pulse but they have clearly been struck to the head, or gotten
-    overly drunk for a Monday morning. As you are the protagonist of a text-based adventure, your first instinct is not
-    to help but to scavenge for any loot he might have. He appears to blessed with a chainsaw. That's convenient.""",
+overly drunk for a Monday morning. As you are the protagonist of a text-based adventure, your first instinct is not
+to help but to scavenge for any loot he might have. He appears to blessed with a chainsaw. That's convenient.""",
 
     "exits": {"right": "Floor1", "f": "pay respects"},
 
@@ -67,7 +67,7 @@ room_f = {
     "description":
     """Achievement Unlocked: Self-Respect.""",
 
-    "exits": {"and kiss forehead": "body"},
+    "exits": {"back": "body"},
 
     "items": [item_humility]
 }
@@ -76,9 +76,9 @@ room_f2o = {
     "name": "Second Floor",
 
     "description":
-        """After effortlessly clearing the barricade thanks to your mighty chainsaw, you climb the stairs to the second floor.
-        None of the lights are on, and in the near distance you notice a shadowy figure lumbering about. A wiseman would ready
-        the chainsaw, but a real man goes in with his fists and his wit.""",
+    """After effortlessly clearing the barricade thanks to your mighty chainsaw, you climb the stairs to the second floor.
+None of the lights are on, and in the near distance you notice a shadowy figure lumbering about. A wiseman would ready
+the chainsaw, but a real man goes in with his fists and his wit.""",
 
     "exits": {"forward": "Fight"},
 
@@ -96,10 +96,10 @@ room_fight = {
 
     "description":
     """You walk towards the figure and as you get closer, you notice the silhouette is Jing Wu. She is lurching about like
-     a zombie from World War Z, or rather a good film like 28 Days Later. As you step towards her, she notices your presence
-     and turns around. Under her breath she mutters "Wake Me Up Inside (Can't Wake up)" then starts to run towards you
-     aggressively. She appears noticeably triggered, and you deal with it in the only way a man can, with patriarchy
-     (fists).""",
+a zombie from World War Z, or rather a good film like 28 Days Later. As you step towards her, she notices your presence
+and turns around. Under her breath she mutters "Wake Me Up Inside (Can't Wake up)" then starts to run towards you
+aggressively. She appears noticeably triggered, and you deal with it in the only way a man can, with patriarchy
+(fists).""",
 
     "exits": {"and falcon punch her": "Floor2", "and one bang her": "Floor2", "rko": "Floor2",
               "and hadouken her": "Floor2", "and quickscope her": "Floor2", "and backhand her": "Floor2", "and worldstar her": "Floor2"},
@@ -112,8 +112,8 @@ room_floor2 = {
 
     "description":
     """You have successfully showed her what for, whether that was required or not is another question. Floor 2 is in an even worse state
-    than Floor 1. Tables have been knocked over, windows have been smashed, jimmies have been rustled. The only other human here is Jing Wu,
-    and your only exit is to keep going up as you don't want to face your previous actions.""",
+than Floor 1. Tables have been knocked over, windows have been smashed, jimmies have been rustled. The only other human here is Jing Wu,
+and your only exit is to keep going up as you don't want to face your previous actions.""",
 
     "exits": {"left": "Jing Wu", "up": "Floor3"},
 
@@ -125,8 +125,8 @@ room_jing = {
 
     "description":
     """What you do have is a very particular set of skills. Skills you acquired over a very long career. Skills that make you a nightmare
-    for people like Jing. Luckily, your experience with said skills allowed you to stun her without causing any permanent damage. Well done.
-    In her pocket is a note that appears to have frantically scrawled upon.""",
+for people like Jing. Luckily, your experience with said skills allowed you to stun her without causing any permanent damage. Well done.
+In her pocket is a note that appears to have frantically scrawled upon.""",
 
     "exits": {"right": "Floor2"},
 
@@ -138,8 +138,8 @@ room_floor3 = {
 
     "description":
     """The third floor looks far more battered than the previous floors combined. It is evident at this point that
-    something has gone very, very wrong. It couldn't be you.... could it? No, absolutely not, what a foolish assumption.
-    The door to the lecture hall is splattered with blood. Are they that excited?""",
+something has gone very, very wrong. It couldn't be you.... could it? No, absolutely not, what a foolish assumption.
+The door to the lecture hall is splattered with blood. Are they that excited?""",
 
     "exits": {"down": "Floor2", "left": "Lecture Hall"},
 
@@ -151,9 +151,9 @@ room_lecture = {
 
     "description":
     """Oh dear. You recognise now that perhaps you might have some involvement here. "Welcome Kirill" an automated
-    voice spoke from the front of the lecture hall. "All threats within the vicinity
-    have successfully been incapacitated". No, it couldn't be.. your wonderful creation, your beautiful bae. This disaster
-    was all caused by the machine??. Y tho?""",
+voice spoke from the front of the lecture hall. "All threats within the vicinity
+have successfully been incapacitated". No, it couldn't be.. your wonderful creation, your beautiful bae. This disaster
+was all caused by the machine??. Y tho?""",
 
     "exits": {"down": "Floor2", "left": "Lecture Hall", "input print threat_id": "Print the threat id"},
 
@@ -165,14 +165,14 @@ threat_id = {
 
     "description":
     """You frantically input the command.. trying to find some reason behind the madness that has ensued...
-    "Threat id - Possible freshers flu contamination" reads the machine. "Threat priority HIGH.
-    Moderate incapacitation executed". Although unethical you realise resistance to the incapacitation module has
-    been known to cause violent and unforgiving psychosis in some subjects. This mixed with your deep underlying fear
-    of contracting one of university's greatest perils "freshers flu" may have been somewhat misinterpreted
-    in the many thousands of lines of code that govern this great invention.
+"Threat id - Possible freshers flu contamination" reads the machine. "Threat priority HIGH.
+Moderate incapacitation executed". Although unethical you realise resistance to the incapacitation module has
+been known to cause violent and unforgiving psychosis in some subjects. This mixed with your deep underlying fear
+of contracting one of university's greatest perils "freshers flu" may have been somewhat misinterpreted
+in the many thousands of lines of code that govern this great invention.
 
-    You must find a way to end this. The killcode of course!... wait what was it again? Urgh who has time to remember
-    such arbitrary details.""",
+You must find a way to end this. The killcode of course!... wait what was it again? Urgh who has time to remember
+such arbitrary details.""",
 
 # trying to link the player back to the note left by jing?
 
