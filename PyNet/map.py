@@ -56,7 +56,7 @@ room_body = {
 overly drunk for a Monday morning. As you are the protagonist of a text-based adventure, your first instinct is not
 to help but to scavenge for any loot he might have. He appears to blessed with a chainsaw. That's convenient.""",
 
-    "exits": {"right": "Floor1", "f": "pay respects"},
+    "exits": {"right": "Floor1", "f": "PayRespects"},
 
     "items": [item_saw]
 }
@@ -101,8 +101,7 @@ and turns around. Under her breath she mutters "Wake Me Up Inside (Can't Wake up
 aggressively. She appears noticeably triggered, and you deal with it in the only way a man can, with patriarchy
 (fists).""",
 
-    "exits": {"and falcon punch her": "Floor2", "and one bang her": "Floor2", "rko": "Floor2",
-              "and hadouken her": "Floor2", "and quickscope her": "Floor2", "and backhand her": "Floor2", "and worldstar her": "Floor2"},
+    "exits": {"rko": "Floor2", "hadouken": "Floor2", "quickscope": "Floor2", "backhand": "Floor2", "worldstar": "Floor2"},
 
     "items": []
 }
@@ -178,7 +177,7 @@ in the many thousands of lines of code that govern this great invention.
 Well on the bright side, you aren't technically a killer. Yay? But still, that's one hell of a bug.
 
 You must find a way to end this. The killcode of course!... wait what was it again? Urgh who has time to remember
-such arbitrary details.""",
+such arbitrary details. If only it was written down somewhere.""",
 
 # trying to link the player back to the note left by jing?
 
@@ -208,7 +207,7 @@ rooms = {
     "Fight": room_fight,
     "Floor2": room_floor2,
     "Jing Wu": room_jing,
-    "Pay Respects": room_f,
+    "PayRespects": room_f,
     "Floor3": room_floor3,
     "Lecture Hall": room_lecture,
     "PrintThreat": room_threat_id,

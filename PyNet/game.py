@@ -37,7 +37,10 @@ def exit_leads_to(exits, direction):
     return rooms[exits[direction]]["name"]
 
 def print_exit(direction, leads_to):
-    print("GO " + direction.upper() + " to " + leads_to + ".")
+    if current_room == rooms["Fight"]:
+        print("HEROICALLY " + direction.upper() + " to defeat her.")
+    if current_room != rooms["Fight"]:
+        print("GO " + direction.upper() + " to " + leads_to + ".")
 
 def print_menu(exits, room_items, inv_items):
     print("You can:")
@@ -104,7 +107,7 @@ def execute_command(command):
     if 0 == len(command):
         return
 
-    if command[0] == "go":
+    if command[0] == "go" or command[0] == "heroically":
         if len(command) > 1:
             execute_go(command[1])
         else:
