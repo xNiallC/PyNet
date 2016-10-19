@@ -156,7 +156,7 @@ text based game.
 Oh dear. You recognise now that perhaps you might have some involvement here. "Welcome Kirill" an automated
 voice spoke from the front of the lecture hall. "All threats within the vicinity
 have successfully been incapacitated". No, it couldn't be.. your wonderful creation, your beautiful bae. This disaster
-was all caused by your machine??. Y tho?""",
+was all caused by your machine??. Protectotron! y tho?""",
 
     "exits": {"down": "Floor2", "left": "Lecture Hall", "input print threat_id": "Print the threat id"},
 
