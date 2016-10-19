@@ -18,7 +18,7 @@ room_floor0 = {
 The normal buzz of student life is nowhere to be seen. The elevator door appears to be out of whack. At least
 nobody is around to pass on their flu on your big day.""",
 
-    "exits": {"right": "Reception", "up": "Floor1", "test": "FinishHim"},
+    "exits": {"right": "Reception", "up": "Floor1"},
 
     "items": []
 }
@@ -77,16 +77,16 @@ room_f2o = {
 
     "description":
     """After effortlessly clearing the barricade thanks to your mighty chainsaw, you climb the stairs to the second floor.
-None of the lights are on, and in the near distance you notice a shadowy figure lumbering about. A wiseman would ready
-the chainsaw, but a real man goes in with his fists and his wit.""",
+None of the lights are on, there's a mysterious odour coming from the bathroom, and in the near distance you notice a
+shadowy figure lumbering about. The chainsaw would've been handy here.""",
 
-    "exits": {"forward": "Fight"},
+    "exits": {"forward": "Fight", "down": "Floor1"},
 
     "items": [],
 
     "requirements": {
         "item": item_saw,
-        "item_held": "You heroically tear apart the barricade with your chainsaw.",
+        "item_held": "You heroically tear apart the barricade with your chainsaw, but sadly it breaks.",
         "item_missing": "You headbutt the barrier in an attempt to break it, but it doesn't work. You need something else.",
     }
 }
@@ -114,9 +114,33 @@ room_floor2 = {
 than Floor 1. Tables have been knocked over, windows have been smashed, jimmies have been rustled. The only other human here is Jing Wu,
 and your only exit is to keep going up as you don't want to face your previous actions.""",
 
-    "exits": {"left": "Jing Wu", "up": "Floor3"},
+    "exits": {"left": "Jing Wu", "up": "Floor3", "right": "Bathroom"},
 
     "items": []
+}
+
+room_bathroom = {
+    "name": "Bathroom",
+
+    "description":
+    """The Second Floor bathroom, a place of beauty and tranquility. Bad as the smell may be, it's comforting, a sense of homeliness.
+One of the taps doesn't work and the toilet door has been smashed in. You are unsure whether this is abnormal.""",
+
+    "exits": {"left": "Floor2", "right": "Stall"},
+
+    "items": []
+}
+
+room_stall = {
+    "name": "Stall",
+
+    "description":
+    """You almost too-enthusiastically peer into the bowl of the toilet and notice a piece of toilet paper with writing on it.
+Please don't take it. You're above this. Just leave.""",
+
+    "exits": {"left": "Bathroom"},
+
+    "items": [item_note2]
 }
 
 room_jing = {
@@ -158,7 +182,7 @@ voice spoke from the front of the lecture hall. "All threats within the vicinity
 have successfully been incapacitated". No, it couldn't be.. your wonderful creation, your beautiful bae. This disaster
 was all caused by your machine??. Y tho?""",
 
-    "exits": {"down": "Floor2", "left": "Lecture Hall", "input print threat_id": "Print the threat id"},
+    "exits": {"down": "Floor2", "left": "Lecture Hall", "laptop": "Print the threat id"},
 
     "items": [item_note]
 }
@@ -181,7 +205,7 @@ such arbitrary details. If only it was written down somewhere.""",
 
 # trying to link the player back to the note left by jing?
 
-    "exits": {"down": "Floor2", "input killcode": "FinishHim"},
+    "exits": {"down": "Floor2", "cmd": "FinishHim"},
 
     "items": []
 }
@@ -191,9 +215,6 @@ room_finish_him = {
 
     "description":
         """ """,
-
-    # somehow create a win condition?
-
     "exits": {" "},
 
     "items": []
@@ -212,4 +233,6 @@ rooms = {
     "Lecture Hall": room_lecture,
     "PrintThreat": room_threat_id,
     "FinishHim": room_finish_him,
+    "Bathroom": room_bathroom,
+    "Stall": room_stall
 }

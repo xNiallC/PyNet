@@ -90,6 +90,7 @@ def execute_take(item_id):
 def execute_examine(item_id):
     for item in inventory:
         if item_id == item["id"]:
+            print("")
             print(str(item["name"]).upper() + ":")
             print(item["description"])
             return
@@ -159,6 +160,7 @@ def main():
     # Main game loop
     while True:
         # Display game status (room description, inventory etc.)
+        print("#" * 110)
         print_room(current_room)
         if current_room == rooms["FinishHim"]:
             complete = show_outro()
@@ -181,6 +183,9 @@ def show_outro():
     machine_input = input("C:\\users\Kirill\Protectotron> ")
     if machine_input == "mylittlepony99":
         print(ending_win)
+        return True
+    elif machine_input == "horselover2003":
+        print(ending_lose)
         return True
     else:
         print("C:\\users\Kirill\Protectotron> That input is not recognised. Subject being ejected from area.")
