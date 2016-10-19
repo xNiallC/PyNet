@@ -43,7 +43,7 @@ room_empty = {
     "description":
     """It's an empty room. I don't know what you expected really. No easter eggs here, trust me.""",
 
-    "exits": {"down": "Floor0", "left": "body", "up": "Floor2Opening", "right": "Empty"},
+    "exits": {"down": "Floor0", "left": "body", "up": "Floor2Opening"},
 
     "items": [item_easteregg]
 }
@@ -204,7 +204,7 @@ room_threat_id = {
     "name": "Your Computer",
 
     "description":
-    """You frantically input the command.. trying to find some reason behind the madness that has ensued...
+    """You frantically input the command "print threat_id".. trying to find some reason behind the madness that has ensued...
 "Threat id - Possible freshers flu contamination" reads the machine. "Threat priority HIGH -
 ethical decontamination by forced combat executed".
 
