@@ -11,6 +11,6 @@ forget to logoff the lecture hall computer did you?
 ending_win = """------ Congratulations, YOU WON.. ------
 Well kind of.. there is the small matter of the onslaught that you may have indirectly caused, not to mention the legal
 implications you now find yourself in, all neatly packaged with the unfathomable guilt and remorse you owe towards each
-victim and there families. As the saying goes I'm selfish, impatient, and a little insecure. I make mistakes.
+victim and their families. As the saying goes I'm selfish, impatient, and a little insecure. I make mistakes.
 But, at the end of the day, you are the hero Gotham deserves, but not the one it needs right now. I mean Cardiff. Whatever,
 you saved the day, even if you did cause it."""

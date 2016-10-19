@@ -110,9 +110,9 @@ room_floor2 = {
     "name": "Second Floor",
 
     "description":
-    """You have successfully showed her what for, whether that was required or not is another question. Floor 2 is in an even worse state
-than Floor 1. Tables have been knocked over, windows have been smashed, jimmies have been rustled. The only other human here is Jing Wu,
-and your only exit is to keep going up as you don't want to face your previous actions.""",
+    """You have successfully showed her what for, whether that was required or not is another question.
+Floor 2 is in an even worse state than Floor 1. Tables have been knocked over, windows have been smashed, jimmies have been rustled.
+The only other human here is Jing Wu, and your only exit is to keep going up as you don't want to face your previous actions.""",
 
     "exits": {"left": "Jing Wu", "up": "Floor3"},
 
@@ -125,7 +125,7 @@ room_jing = {
     "description":
     """What you do have is a very particular set of skills. Skills you acquired over a very long career. Skills that make you a nightmare
 for people like Jing. Luckily, your experience with said skills allowed you to stun her without causing any permanent damage. Well done.
-In her pocket is a note that appears to have frantically scrawled upon.""",
+In her pocket is a note that appears to have been frantically scrawled upon.""",
 
     "exits": {"right": "Floor2"},
 
@@ -149,8 +149,8 @@ room_lecture = {
     "name": "Lecture Hall",
 
     "description":
-    """As the lecture hall door opens you gaze around at the forsaken area. Carnage must have occured in every corner of
-the room. The spectacle was so unsightly it could not even be accurately depicted in the descriptive writing of say.. a
+    """As the lecture hall door opens you gaze around at the forsaken area. Carnage must have occurred in every corner of
+the room. The spectacle is so unsightly it can't even be accurately depicted in the descriptive writing of say.. a
 text based game.
 
 Oh dear. You recognise now that perhaps you might have some involvement here. "Welcome Kirill" an automated
@@ -168,11 +168,12 @@ room_threat_id = {
 
     "description":
     """You frantically input the command.. trying to find some reason behind the madness that has ensued...
-"Threat id - Possible freshers flu contamination" reads the machine. "Threat priority HIGH.
-ethical decontamination by forced combat executed". LOL you realise the incapacitation module has
-the ability to cause violent and unforgiving psychosis in subjects. This mixed with your deep underlying fear
-of contracting one of university's greatest perils "freshers flu" may have been somewhat misinterpreted
-in the many thousands of lines of code that govern this great invention.
+"Threat id - Possible freshers flu contamination" reads the machine. "Threat priority HIGH -
+ethical decontamination by forced combat executed".
+
+LOL you realise the incapacitation module has the ability to cause violent and unforgiving psychosis in subjects.
+This mixed with your deep underlying fear of contracting one of university's greatest perils "freshers flu" may have
+been somewhat misinterpreted in the many thousands of lines of code that govern this great invention.
 
 Well on the bright side, you aren't technically a killer. Yay? But still, that's one hell of a bug.
 
