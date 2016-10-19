@@ -50,9 +50,17 @@ item_coughsyrup = {
 }
 
 item_note2 = {
-    "id": "note2",
+    "id": "dirtynote",
 
     "name": "dirty toilet note",
 
     "description": "Smelly, damp toilet note that reads: 'SECRET CODE, DO NOT USE: horselover2003'"
+}
+
+item_easteregg = {
+    "id": "easteregg",
+
+    "name": "Easter Egg",
+
+    "description": "I suppose I was wrong. Well, you have an easter egg now I guess. Congratulations."
 }

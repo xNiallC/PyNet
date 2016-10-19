@@ -43,9 +43,20 @@ room_floor1 = {
 kind of apocalypse but that would be ridiculous. There is a totally standard incapacitated body to the left, and
 the stairs to the right have been barricaded(?). If only you hadn't left your toolkit at home.""",
 
-    "exits": {"down": "Floor0", "left": "body", "up": "Floor2Opening"},
+    "exits": {"down": "Floor0", "left": "body", "up": "Floor2Opening", "right": "Empty"},
 
     "items": []
+}
+
+room_empty = {
+    "name": "Empty Room",
+
+    "description":
+    """It's an empty room. I don't know what you expected really. No easter eggs here, trust me.""",
+
+    "exits": {"down": "Floor0", "left": "body", "up": "Floor2Opening", "right": "Empty"},
+
+    "items": [item_easteregg]
 }
 
 room_body = {
@@ -166,7 +177,7 @@ The door to the lecture hall is splattered with blood. Are they that excited?"""
 
     "exits": {"down": "Floor2", "left": "Lecture Hall"},
 
-    "items": [item_note]
+    "items": []
 }
 
 room_lecture = {
@@ -182,9 +193,9 @@ voice spoke from the front of the lecture hall. "All threats within the vicinity
 have successfully been incapacitated". No, it couldn't be.. your wonderful creation, your beautiful bae. This disaster
 was all caused by your machine??. Protectotron! y tho?""",
 
-    "exits": {"down": "Floor2", "left": "Lecture Hall", "laptop": "Print the threat id"},
+    "exits": {"down": "Floor2", "laptop": "PrintThreat"},
 
-    "items": [item_note]
+    "items": []
 }
 
 room_threat_id = {
@@ -235,5 +246,6 @@ rooms = {
     "PrintThreat": room_threat_id,
     "FinishHim": room_finish_him,
     "Bathroom": room_bathroom,
-    "Stall": room_stall
+    "Stall": room_stall,
+    "Empty": room_empty
 }
