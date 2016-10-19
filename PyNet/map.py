@@ -150,10 +150,14 @@ room_lecture = {
     "name": "Lecture Hall",
 
     "description":
-    """Oh dear. You recognise now that perhaps you might have some involvement here. "Welcome Kirill" an automated
+    """As the lecture hall door opens you gaze around at the forsaken area. Carnage must have occured in every corner of
+the room. The spectacle was so unsightly it could not even be accurately depicted in the descriptive writing of say.. a
+text based game.
+
+Oh dear. You recognise now that perhaps you might have some involvement here. "Welcome Kirill" an automated
 voice spoke from the front of the lecture hall. "All threats within the vicinity
 have successfully been incapacitated". No, it couldn't be.. your wonderful creation, your beautiful bae. This disaster
-was all caused by the machine??. Y tho?""",
+was all caused by your machine??. Y tho?""",
 
     "exits": {"down": "Floor2", "left": "Lecture Hall", "input print threat_id": "Print the threat id"},
 
@@ -166,10 +170,12 @@ room_threat_id = {
     "description":
     """You frantically input the command.. trying to find some reason behind the madness that has ensued...
 "Threat id - Possible freshers flu contamination" reads the machine. "Threat priority HIGH.
-Moderate incapacitation executed". Although unethical you realise resistance to the incapacitation module has
-been known to cause violent and unforgiving psychosis in some subjects. This mixed with your deep underlying fear
+ethical decontamination by forced combat executed". LOL you realise the incapacitation module has
+the ability to cause violent and unforgiving psychosis in subjects. This mixed with your deep underlying fear
 of contracting one of university's greatest perils "freshers flu" may have been somewhat misinterpreted
 in the many thousands of lines of code that govern this great invention.
+
+Well on the bright side, you aren't technically a killer. Yay? But still, that's one hell of a bug.
 
 You must find a way to end this. The killcode of course!... wait what was it again? Urgh who has time to remember
 such arbitrary details.""",

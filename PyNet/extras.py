@@ -8,4 +8,9 @@ coming to witness your brainchild. This could be your big break. Let's hope ever
 forget to logoff the lecture hall computer did you?
 """
 
-ending_win = "test"
+ending_win = """--- Congratulations, YOU WON..---
+Well kind of.. there is the small matter of the onslaught that you may have indirectly caused, not to mention the legal
+implications you now find yourself in, all neatly packaged with the unfathomable guilt and remorse you owe towards each
+victim and there families. As the saying goes I'm selfish, impatient, and a little insecure. I make mistakes.
+But if you can't handle me at my worst, then you sure as hell don't deserve me at my best xoxo
+***or similar retarded/nonsensical saying***"""

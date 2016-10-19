@@ -16,3 +16,15 @@ Things I've added on top of the template:
    * cleaned up menu, prints item in a list rather than seperate commands
  
    * created cough syrup item for fun
+
+
+
+Bugs/changes list. Not really sure how to go about some of these. Callum.
+
+	* once phone is taken from the reception, the description will always read “there 	is a phone here etc..”
+
+	* before approaching the shadowy figure, there could be another option like “go 	back” which prompts a response of “mad bro? you’ve got a presentation to do.” just 	to help make the game feel less linear at that point.
+
+	*maybe change the name of room of respect paying so the user doesn’t think they’re 	actually in another room. 
+
+
