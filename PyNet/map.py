@@ -161,7 +161,7 @@ was all caused by the machine??. Y tho?""",
 }
 
 room_threat_id = {
-    "name": "PrintThreat",
+    "name": "Your Computer",
 
     "description":
     """You frantically input the command.. trying to find some reason behind the madness that has ensued...
@@ -176,13 +176,13 @@ such arbitrary details.""",
 
 # trying to link the player back to the note left by jing?
 
-    "exits": {"down": "Floor2", "input killcode": "Finish him"},
+    "exits": {"down": "Floor2", "input killcode": "FinishHim"},
 
     "items": []
 }
 
 room_finish_him = {
-    "name": "FinishHim",
+    "name": "Finish Him!",
 
     "description":
         """ """,

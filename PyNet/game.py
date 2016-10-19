@@ -175,8 +175,7 @@ def main():
 
 def show_outro():
     print("C:\\users\Kirill\Protectotron> Hello Master. Have you got something to tell me?")
-    machine_input = input()
-
+    machine_input = input("C:\\users\Kirill\Protectotron> ")
     if machine_input == "mylittlepony99":
         print(ending_win)
         return True
