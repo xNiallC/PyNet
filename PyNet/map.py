@@ -1,15 +1,4 @@
 from items import *
-#   Basic Intro, Please improve this shit:
-#   "One man. One desire. The goal to create a device protect himself and those around him, the only way he knew how.
-#   Python."The words echo in your (Kirill Sodorov, Expert Programmer, Overall Nice Guy) head. Years of planning,
-#   programming, bug fixing, getting angry, and progressive montages led to this moment. Over a cup of lukewarm coffee,
-#   you finish the last function:- "def killcode". You lean back and revel in your own glory, ready to get a good
-#   night's sleep to prepare for the big presentation in the University tomorrow. Researchers from round the country are
-#   coming to witness your brainchild. This could be your big break. Let's hope everything goes to plan. You didn't
-#   forget to logoff the lecture hall computer did you?
-
-
-#   Needs to be finished, not sure about the final rooms tbh. Try out some stuff if you can please xxx
 room_floor0 = {
     "name": "Bottom Floor",
 
@@ -175,7 +164,20 @@ room_floor3 = {
 something has gone very, very wrong. It couldn't be you.... could it? No, absolutely not, what a foolish assumption.
 The door to the lecture hall is splattered with blood. Are they that excited?""",
 
-    "exits": {"down": "Floor2", "left": "Lecture Hall"},
+    "exits": {"down": "Floor2", "left": "Lecture Hall", "right": "floor3extra"},
+
+    "items": []
+}
+
+room_floor3extra = {
+    "name": "Third Floor Landing",
+
+    "description":
+    """You investigate the local area on the third floor. You start to wonder if perhaps you are in some sort of
+low budget Welsh remake of The Truman Show, or if the nice cashier at Starbucks slipped something strange into your
+coffee earlier. Nonetheless, you plod forward in your investigation. You seem to be having morbid fun with this.""",
+
+    "exits": {"down": "Floor2", "left": "Floor3"},
 
     "items": []
 }
@@ -193,7 +195,7 @@ voice spoke from the front of the lecture hall. "All threats within the vicinity
 have successfully been incapacitated". No, it couldn't be.. your wonderful creation, your beautiful bae. This disaster
 was all caused by your machine??. Protectotron! y tho?""",
 
-    "exits": {"down": "Floor2", "laptop": "PrintThreat"},
+    "exits": {"right": "Floor3", "laptop": "PrintThreat"},
 
     "items": []
 }
@@ -214,8 +216,6 @@ Well on the bright side, you aren't technically a killer. Yay? But still, that's
 
 You must find a way to end this. The killcode of course!... wait what was it again? Urgh who has time to remember
 such arbitrary details. If only it was written down somewhere.""",
-
-# trying to link the player back to the note left by jing?
 
     "exits": {"down": "Floor2", "cmd": "FinishHim"},
 
@@ -247,5 +247,6 @@ rooms = {
     "FinishHim": room_finish_him,
     "Bathroom": room_bathroom,
     "Stall": room_stall,
-    "Empty": room_empty
+    "Empty": room_empty,
+    "floor3extra": room_floor3extra
 }
